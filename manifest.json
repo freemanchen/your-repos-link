@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Link to Your Repos - Github",
+  "description": "Adds a link to your repositories right after the 'Your profile' link in the header of Github.  No more need to click on Profile and then over to the repositories tab.",
+  "version": "1.0",
+  "permissions": [
+    "activeTab", "storage"
+   ],
+   "icons": { "128": "icon128.png" },
+   "options_ui": {
+     "page": "options.html",
+     "chrome_style": true
+   },
+   "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["insert.js"]
+      }
+    ]
+}
